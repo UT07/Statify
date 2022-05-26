@@ -1,7 +1,7 @@
-# Spotify Stats :bar_chart:
+# Statify :bar_chart:
 
-Spotify Stats is a website where one can analyze their spotify account stats by getting their Top Songs, Favourite Artists, Top Genres, Recommendations, and visual representation of the above.
-Visit - [Spotify Stats]() :rocket:
+Statify is a website where one can analyze their spotify account stats by getting their Top Songs, Favourite Artists, Top Genres, Recommendations, and visual representation of the above.
+Visit - [Statify](https://statify-tool.herokuapp.com) :rocket:
 
 ## Features
 * **Favourite Songs**  - See the songs you love to listen! Your favorite songs of all time!
