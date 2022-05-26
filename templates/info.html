@@ -12,23 +12,6 @@
 </head>
 
 <body>    
-    <header>
-        <div class="users">
-            <div class="photo">
-                {% if user['image'] %}
-                    <img class="image" src="{{ user['image'][0]['url'] }}"></img>
-                {% else %}
-                    <div class="image"></div>
-                {% endif %}
-            </div>
-            <div class="name">
-                <h3>{{ user['name'] }}</h3>
-                <h4>Followers - {{ user['followers'] }}</h4>
-                <a style="margin-top: 5rem;padding: 0.31rem; border-radius: 35px;background-color: #1ed760;color: #000;font-size: 1rem;text-decoration: none;" href="/logout"> <i style="color: #000;" class="fa fa-spotify"></i>Logout</a>
-                <a style="margin-top: 5rem;padding: 0.31rem; border-radius: 35px;background-color: #1ed760;color: #000;font-size: 1rem;text-decoration: none;" href="{{ url_for('share') }}"> <i style="color: #000;" class="fa fa-share-alt" aria-hidden="true"></i>Share your stats</a>
-            </div>
-        </div>
-    </header>
     <section class="songs">
         <div class="title">
             <h2 class="topic">Here are your Top 10 Songs</h2>
@@ -209,7 +192,20 @@
         <a class="down2" href="{{ url_for('share') }}"> <i style="color: #000;" class="fa fa-share-alt" aria-hidden="true"></i>Share your stats</a>
     </div>
     <footer>
-        <h1>Thank You for visiting!</h1>
+        <div class="users">
+            <div class="photo">
+                {% if user['image'] %}
+                    <img class="image" src="{{ user['image'][0]['url'] }}"></img>
+                {% else %}
+                    <div class="image"></div>
+                {% endif %}
+            </div>
+            <div class="name">
+                <h3>{{ user['name'] }}</h3>
+                <h4 style="margin-bottom:3rem ;">Followers - {{ user['followers'] }}</h4>
+            </div>
+        </div>
+        <h1 style="margin-top: 5rem;">Thank You for visiting!</h1>
         <small>This website was made with purpose to connect you with your music like never before.</small>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
