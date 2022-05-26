@@ -20,5 +20,4 @@ Visit - [Statify](https://statify-tool.herokuapp.com) :rocket:
 ## Contributors
 * [Utkarsh Singh](https://github.com/UT07)
 
-## Share Stats Sample Image
 
