@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Stats</title>
+    <link rel = "icon" href="../static/favicon.png" type = "image/x-icon"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='landing2.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <h1 class="heading1">&lt;Stat<span style="color: #1ed760;">ify</span>&gt;</h1>
+
+    {% if not auth %}
+        <a class ="login-btn" href="/verify"> <i style="color: #000;" class="fa fa-spotify"></i> Login</a>
+    {% else %}
+        <a class ="login-btn" href="/logout"> <i style="color: #000;" class="fa fa-spotify"></i> Logout</a>
+    {% endif %}
+    
+
+    <div class="container">
+
+        {% with messages = get_flashed_messages() %}
+        {% for message in messages %}
+        <h5 style="margin-bottom: 3rem;padding: 1.1rem; border-radius: 35px;background-color: #1ed760;color: #000;font-size: 1rem;text-decoration: none;">{{ message }}</h5>
+        {% endfor %}
+        {% endwith %}
+
+        <section class="sub">
+            <div style="background-image: url('../static/songs.jpg');" class="top">
+                <h2 style="position: absolute; left: -1.2em; letter-spacing: 1px; color: transparent;-webkit-text-stroke: 0.51px #fff;">Favourite Songs</h2>
+            </div>
+            <div class="desc"><p class="sub-text">
+                    See the songs you love to listen! Your favorite songs of all time!
+                </p>
+            </div>
+        </section>
+
+        <section class="sub">
+            <div class="desc"><p class="sub-text">
+                    See the artists you've been jamming to everyday to make your day better! Your favorite artists of all time!
+                </p>
+            </div>
+            <div style="background-image: url('../static/artists.jpg');" class="top top-artist">
+                <h2 style="position: absolute; right: -1.2em; letter-spacing: 1px; color: transparent;-webkit-text-stroke: 0.51px #fff;">Favourite Artists</h2>
+            </div>
+        </section>
+
+        <section class="sub">
+            <div style="background-image: url('../static/genre.jpg');" class="top">
+                <h2 style="position: absolute; left: -1.2em; letter-spacing: 1px; color: transparent;-webkit-text-stroke: 0.51px #fff;">Top Genres</h2>
+            </div>
+            <div class="desc"><p class="sub-text">
+                    Rock? EDM? Pop? See your favorite genres of all time!
+                </p>
+            </div>
+        </section>
+
+        <section class="sub">
+            <div class="desc"><p class="sub-text">
+                    See and discover similar artists to the ones you like and discover new songs on the basis of your taste!
+                </p>
+            </div>
+            <div style="background-image: url('../static/recommend.png');" class="top">
+                <h2 style="position: absolute; margin-top:15px; right: -2.2em; letter-spacing: 1px; color: transparent;-webkit-text-stroke: 0.51px #fff;">Recommendations</h2>
+            </div>
+        </section>
+
+        <section class="sub">
+            <div style="background-image: url('../static/seee.png');" class="top">
+                <h2 style="position: absolute; left: -2.5em; letter-spacing: 1px; color: transparent;-webkit-text-stroke: 0.51px #fff;">Visual Representaion</h2>
+            </div>
+            <div class="desc"><p class="sub-text">
+                    Visualize your music taste with cool graphs!
+                </p>
+            </div>
+        </section>
+    </div>
+
+    {% if not auth %}
+        <a class="info-btn" href="/verify"> <i style="color: #1ed760;" class="fa fa-spotify"></i> Login</a>
+    {% else %}
+        <a class="info-btn" href="/info"> Go to your info page! </a>
+    {% endif %}
+
+
+    <h1 class="heading2">&lt;<span style="color: #fff;">Stat</span><span style="color: #1ed760;">ify</span>&gt;</h1>
+    <h1 class="heading3"><span style="color: #fff;">Developed by</span></h1>
+    <h1 class="heading5"> <span style="color: #fff;">Utkarsh Singh</span> </h1>
+    <div class="main"></div>
+    <div class="main2"></div>
+    <div class="main main3"></div>
+    <div class="main2 main4"></div>
+</body>
+</html>
