@@ -203,7 +203,7 @@ def create_image(songs, artists, username):
     bg = Image.open('static/template.png')
 
     d = ImageDraw.Draw(bg)
-    d.text((33,26), username, font=font, fill=(255,255,255))
+    d.text((33,26), username+ "Download your stats from https://statify-tool.herokuapp.com", font=font, fill=(255,255,255))
 
     artists_list[0] = artists_list[0].resize((550,550))
     artists_list[1] = artists_list[1].resize((337,337))
