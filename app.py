@@ -21,13 +21,13 @@ def before_request():
 
 @app.route('/verify')
 def verify():
-    sp_auth = spotipy.oauth2.SpotifyOAuth(scope=SCOPE, client_id="2251c81c607e4ebaa993a4e01a1a6a0b",client_secret="4a129ffc60ba4525a059ba56f2058b99",redirect_uri="http://127.0.0.1:5000/callback")
+    sp_auth = spotipy.oauth2.SpotifyOAuth(scope=SCOPE, client_id="2251c81c607e4ebaa993a4e01a1a6a0b",client_secret="4a129ffc60ba4525a059ba56f2058b99",redirect_uri="https://statify-tool.herokuapp.com/callback")
     auth_url = sp_auth.get_authorize_url()
     return redirect(auth_url)
 
 @app.route('/callback')
 def callback():
-    sp_auth = spotipy.oauth2.SpotifyOAuth(scope=SCOPE, client_id="2251c81c607e4ebaa993a4e01a1a6a0b",client_secret="4a129ffc60ba4525a059ba56f2058b99",redirect_uri="http://127.0.0.1:5000/callback")
+    sp_auth = spotipy.oauth2.SpotifyOAuth(scope=SCOPE, client_id="2251c81c607e4ebaa993a4e01a1a6a0b",client_secret="4a129ffc60ba4525a059ba56f2058b99",redirect_uri="https://statify-tool.herokuapp.com/callback")
     session.clear()
     code = request.args.get('code')
     
