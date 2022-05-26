@@ -378,7 +378,7 @@ function songArtist(all_artists, songs) {
 function timeChart(duration) {
     options = {
         title: {
-            text: 'Duration Of Songs in seconds',
+            text: 'Duration Of Songs in Seconds',
             align: 'center',
             style : {
                 fontFamily: 'Montserrat',
@@ -389,7 +389,7 @@ function timeChart(duration) {
         colors: ['#FF8900', '#FFAD24', '#FFC058'],
         series: [{
             data: duration[1],
-            name: 'Duration of Song in seconds'
+            name: 'Duration of Song in Seconds'
         }],
         chart: {
             type: 'bar',
