@@ -22,15 +22,17 @@ body {
 
 .heading2{
     position: absolute;
+    left: -2%;
     color: #000;
     margin-top: 157rem;
-    margin-left: 5rem;
+    margin-left: 50rem;
     font-size: 5rem;
     font-weight: 900;
 }
 
 .heading3{
     position: absolute;
+    left: 650px;
     color: #000;
     margin-top: 163rem;
     margin-left: 5rem;
