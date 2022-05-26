@@ -183,7 +183,7 @@ def get_recommendations(sp, artists, songs, genre, audio_features):
     return song_list[:5]
 
 def create_playlist(sp,songs,uid):
-    playlist = sp.user_playlist_create(uid, 'Spotify Stats: Your Top Songs!', description='Your Top Songs of all time!')
+    playlist = sp.user_playlist_create(uid, 'Statify by UT: Your Top Songs!', description='Your Top 100 Songs of all time!')
     playlist_id = playlist['id']
     tracks_add = sp.user_playlist_add_tracks(uid, playlist_id, songs)
     playlist_image = sp.playlist_cover_image(playlist_id)[0]['url']
