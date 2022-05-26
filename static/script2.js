@@ -378,7 +378,7 @@ function songArtist(all_artists, songs) {
 function timeChart(duration) {
     options = {
         title: {
-            text: 'Duration Of Songs',
+            text: 'Duration Of Songs in seconds',
             align: 'center',
             style : {
                 fontFamily: 'Montserrat',
